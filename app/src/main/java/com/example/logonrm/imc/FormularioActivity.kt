@@ -13,9 +13,9 @@ class FormularioActivity : AppCompatActivity() {
 
         btCalcular.setOnClickListener{
             val telaResultado = Intent(this, ResultadoActivity::class.java)
-            startActivity(telaResultado)
             telaResultado.putExtra("PESO", inputPeso.editText?.text.toString())
             telaResultado.putExtra("ALTURA", inputAltura.editText?.text.toString())
+            startActivity(telaResultado)
         }
 
         btLimpar.setOnClickListener {
